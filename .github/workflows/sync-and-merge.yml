@@ -1,0 +1,77 @@
+name: Sync Upstream and Merge Configs
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # 每天 UTC 时间 00:00 运行
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  sync-and-merge:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Git
+        run: |
+          git config --global user.name "GaeaRuiW"
+          git config --global user.email "gaea.rui.wang@gmail.com"
+
+      - name: Sync with upstream
+        run: |
+          git remote add upstream https://github.com/lencx/noi.git
+          git fetch upstream
+          git checkout main
+          git merge upstream/main
+          git push origin main
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Merge config files and add AIStudio
+        run: |
+          python -c '
+          import json
+
+          # 读取两个文件
+          with open("configs/noi.mode.json") as f1, open("configs/noi.mode.cn.json") as f2:
+              mode = json.load(f1)
+              mode_cn = json.load(f2)
+
+          # 合并基本信息，取版本号较高的
+          merged = {
+              "name": "Noi Mode Fusion",
+              "version": max(mode["version"], mode_cn["version"]),
+              "sync": "Auto-merged from noi.mode.json and noi.mode.cn.json"
+          }
+
+          # 合并 modes 列表
+          all_modes = mode["modes"] + [m for m in mode_cn["modes"] if m["id"] not in {x["id"] for x in mode["modes"]}]
+          
+          # 检查是否包含 AIStudio, 只检查有 url 的条目
+          has_aistudio = any("url" in mode and mode["url"] == "https://aistudio.google.com" for mode in all_modes)
+          if not has_aistudio:
+              all_modes.append({
+                  "id": "noi:aistudio",
+                  "parent": "noi@ai",
+                  "text": "AIStudio",
+                  "url": "https://aistudio.google.com"
+              })
+
+          merged["modes"] = all_modes
+
+          # 写入新文件
+          with open("configs/noi.mode.fusion.json", "w") as f:
+              json.dump(merged, f, indent=2, ensure_ascii=False)
+          '
+
+      - name: Commit merged config
+        run: |
+          git add configs/noi.mode.fusion.json
+          git commit -m "Auto-merge config files with AIStudio" || echo "No changes to commit"
+          git push origin main
