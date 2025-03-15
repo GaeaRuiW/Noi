@@ -1,0 +1,319 @@
+{
+  "name": "Noi Mode Fusion",
+  "version": "0.1.14",
+  "sync": "Auto-merged from noi.mode.json and noi.mode.cn.json",
+  "modes": [
+    {
+      "id": "noi@ai",
+      "parent": 0,
+      "dir": true,
+      "text": "AI"
+    },
+    {
+      "id": "noi@dev",
+      "parent": 0,
+      "dir": true,
+      "text": "Dev"
+    },
+    {
+      "id": "noi@community",
+      "parent": 0,
+      "dir": true,
+      "text": "Community"
+    },
+    {
+      "id": "noi@design",
+      "parent": 0,
+      "dir": true,
+      "text": "Design"
+    },
+    {
+      "id": "noi@email",
+      "parent": 0,
+      "dir": true,
+      "text": "Email"
+    },
+    {
+      "id": "noi@video",
+      "parent": 0,
+      "dir": true,
+      "text": "Video"
+    },
+    {
+      "id": "noi:chatgpt",
+      "parent": "noi@ai",
+      "text": "ChatGPT",
+      "url": "https://chatgpt.com"
+    },
+    {
+      "id": "noi:claude",
+      "parent": "noi@ai",
+      "text": "Claude",
+      "url": "https://claude.ai"
+    },
+    {
+      "id": "noi:gemini",
+      "parent": "noi@ai",
+      "text": "Gemini",
+      "url": "https://gemini.google.com"
+    },
+    {
+      "id": "noi:grok",
+      "parent": "noi@ai",
+      "text": "Grok",
+      "url": "https://grok.com"
+    },
+    {
+      "id": "noi:deepseek",
+      "parent": "noi@ai",
+      "text": "DeepSeek",
+      "url": "https://chat.deepseek.com"
+    },
+    {
+      "id": "noi:githubcopilot",
+      "parent": "noi@ai",
+      "text": "GitHub Copilot",
+      "url": "https://github.com/copilot"
+    },
+    {
+      "id": "noi:sora",
+      "parent": "noi@ai",
+      "text": "Sora",
+      "url": "https://sora.com"
+    },
+    {
+      "id": "noi:poe",
+      "parent": "noi@ai",
+      "text": "Poe",
+      "url": "https://poe.com"
+    },
+    {
+      "id": "noi:perplexity",
+      "parent": "noi@ai",
+      "text": "Perplexity",
+      "url": "https://www.perplexity.ai"
+    },
+    {
+      "id": "noi:copilot",
+      "parent": "noi@ai",
+      "text": "Copilot",
+      "url": "https://copilot.microsoft.com"
+    },
+    {
+      "id": "noi:huggingchat",
+      "parent": "noi@ai",
+      "text": "HuggingChat",
+      "url": "https://huggingface.co/chat"
+    },
+    {
+      "id": "noi:groq",
+      "parent": "noi@ai",
+      "text": "Groq",
+      "url": "https://chat.groq.com"
+    },
+    {
+      "id": "noi:lechatmistral",
+      "parent": "noi@ai",
+      "text": "Le Chat Mistral",
+      "url": "https://chat.mistral.ai/chat"
+    },
+    {
+      "id": "noi:pi",
+      "parent": "noi@ai",
+      "text": "Pi",
+      "url": "https://pi.ai/talk"
+    },
+    {
+      "id": "noi:notebooklm",
+      "parent": "noi@ai",
+      "text": "NotebookLM",
+      "url": "https://notebooklm.google.com"
+    },
+    {
+      "id": "noi:coze",
+      "parent": "noi@ai",
+      "text": "Coze",
+      "url": "https://www.coze.com/home"
+    },
+    {
+      "id": "noi:you",
+      "parent": "noi@ai",
+      "text": "YOU",
+      "url": "https://you.com"
+    },
+    {
+      "id": "noi:midjourney",
+      "parent": "noi@ai",
+      "text": "Midjourney",
+      "url": "https://www.midjourney.com"
+    },
+    {
+      "id": "noi:suno",
+      "parent": "noi@ai",
+      "text": "Suno AI",
+      "url": "https://suno.com"
+    },
+    {
+      "id": "noi:github",
+      "parent": "noi@dev",
+      "text": "GitHub",
+      "url": "https://github.com"
+    },
+    {
+      "id": "noi:replit",
+      "parent": "noi@dev",
+      "text": "Replit",
+      "url": "https://replit.com"
+    },
+    {
+      "id": "noi:huggingface",
+      "parent": "noi@dev",
+      "text": "Hugging Face",
+      "url": "https://huggingface.co"
+    },
+    {
+      "id": "noi:vscode",
+      "parent": "noi@dev",
+      "text": "VS Code",
+      "url": "https://vscode.dev"
+    },
+    {
+      "id": "noi:projectidx",
+      "parent": "noi@dev",
+      "text": "Project IDX",
+      "url": "https://idx.google.com"
+    },
+    {
+      "id": "noi:x",
+      "parent": "noi@community",
+      "text": "X",
+      "url": "https://twitter.com"
+    },
+    {
+      "id": "noi:discord",
+      "parent": "noi@community",
+      "text": "Discord",
+      "url": "https://discord.com"
+    },
+    {
+      "id": "noi:hackernews",
+      "parent": "noi@community",
+      "text": "Hacker News",
+      "url": "https://news.ycombinator.com"
+    },
+    {
+      "id": "noi:figma",
+      "parent": "noi@design",
+      "text": "Figma",
+      "url": "https://www.figma.com"
+    },
+    {
+      "id": "noi:dribbble",
+      "parent": "noi@design",
+      "text": "Dribbble",
+      "url": "https://dribbble.com"
+    },
+    {
+      "id": "noi:gmail",
+      "parent": "noi@email",
+      "text": "Gmail",
+      "url": "https://mail.google.com"
+    },
+    {
+      "id": "noi:outlook",
+      "parent": "noi@email",
+      "text": "Outlook",
+      "url": "https://outlook.live.com"
+    },
+    {
+      "id": "noi:youtube",
+      "parent": "noi@video",
+      "text": "YouTube",
+      "url": "https://www.youtube.com"
+    },
+    {
+      "id": "noi@aiCN",
+      "parent": 0,
+      "dir": true,
+      "text": "AI（内陆版）"
+    },
+    {
+      "id": "noi:cozeCN",
+      "parent": "noi@aiCN",
+      "text": "扣子",
+      "url": "https://www.coze.cn/home"
+    },
+    {
+      "id": "noi:doubao",
+      "parent": "noi@aiCN",
+      "text": "豆包",
+      "url": "https://www.doubao.com"
+    },
+    {
+      "id": "noi:jimeng",
+      "parent": "noi@aiCN",
+      "text": "即梦 AI",
+      "url": "https://jimeng.jianying.com"
+    },
+    {
+      "id": "noi:chatglm",
+      "parent": "noi@aiCN",
+      "text": "智谱清言",
+      "url": "https://chatglm.cn"
+    },
+    {
+      "id": "noi:tongyiqianwen",
+      "parent": "noi@aiCN",
+      "text": "通义千问",
+      "url": "https://tongyi.aliyun.com/qianwen"
+    },
+    {
+      "id": "noi:yiyan",
+      "parent": "noi@aiCN",
+      "text": "文心一言",
+      "url": "https://yiyan.baidu.com"
+    },
+    {
+      "id": "noi:xinghuo",
+      "parent": "noi@aiCN",
+      "text": "讯飞星火",
+      "url": "https://xinghuo.xfyun.cn"
+    },
+    {
+      "id": "noi:kimi",
+      "parent": "noi@aiCN",
+      "text": "Kimi",
+      "url": "https://kimi.moonshot.cn"
+    },
+    {
+      "id": "noi:metaso",
+      "parent": "noi@aiCN",
+      "text": "秘塔",
+      "url": "https://metaso.cn"
+    },
+    {
+      "id": "noi:qqmail",
+      "parent": "noi@email",
+      "text": "QQ 邮箱",
+      "url": "https://mail.qq.com"
+    },
+    {
+      "id": "noi:yi163",
+      "parent": "noi@email",
+      "text": "网易邮箱",
+      "url": "https://mail.163.com"
+    },
+    {
+      "id": "noi:bilibili",
+      "parent": "noi@video",
+      "text": "哔哩哔哩",
+      "url": "https://www.bilibili.com"
+    },
+    {
+      "id": "noi:aistudio",
+      "parent": "noi@ai",
+      "text": "AIStudio",
+      "url": "https://aistudio.google.com"
+    }
+  ]
+}
